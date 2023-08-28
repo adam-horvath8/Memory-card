@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.main-div {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 45px;
+  padding: 50px;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: aqua;
+  min-height: 300px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-picture {
+  background-color: antiquewhite;
+  flex: 2;
+}
+
+.card-name {
+  flex: 1;
+}
+
+
+.message {
+  background-color: aquamarine;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
