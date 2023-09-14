@@ -35,7 +35,7 @@ const Card = ({
 
   return (
     <div className="card" onClick={handleClick}>
-      <div className="card-picture">{picture}</div>
+      <img className="card-picture" src={picture}></img>
       <div className="card-name">{name}</div>
     </div>
   );

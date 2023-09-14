@@ -1,20 +1,30 @@
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Message from "./LosingMessage";
+import Message from "./Message";
+import blackHotel from "./assets/black-hotel.jpg";
+import blackSign from "./assets/black-sign.jpg";
+import greenLamb from "./assets/green-lamb.jpg";
+import grey from "./assets/grey.jpg";
+import orange from "./assets/orange.jpg";
+import redCity from "./assets/red-city.jpg";
+import red from "./assets/red.jpg";
+import white from "./assets/white.jpg";
+import yellowLamb from "./assets/yellow-lamb.jpg";
+import yellow from "./assets/yellow.jpg";
 
 function App() {
   const cards = [
-    { pic: "1p", name: "1", id: uuidv4() },
-    { pic: "2p", name: "2", id: uuidv4() },
-    { pic: "3p", name: "3", id: uuidv4() },
-    { pic: "4p", name: "4", id: uuidv4() },
-    { pic: "5p", name: "5", id: uuidv4() },
-    { pic: "6p", name: "6", id: uuidv4() },
-    { pic: "7p", name: "7", id: uuidv4() },
-    { pic: "8p", name: "8", id: uuidv4() },
-    { pic: "9p", name: "9", id: uuidv4() },
-    { pic: "10p", name: "10", id: uuidv4() },
+    { pic: blackHotel, name: "Black Jack", id: uuidv4() },
+    { pic: blackSign, name: "Knigth Rider", id: uuidv4() },
+    { pic: greenLamb, name: "Green Lambo", id: uuidv4() },
+    { pic: grey, name: "Grey Lambo", id: uuidv4() },
+    { pic: orange, name: "Orange Lambo", id: uuidv4() },
+    { pic: redCity, name: "Red Devil", id: uuidv4() },
+    { pic: red, name: "Ferrari", id: uuidv4() },
+    { pic: white, name: "White Lambo", id: uuidv4() },
+    { pic: yellowLamb, name: "Yellow Lambo", id: uuidv4() },
+    { pic: yellow, name: "Yellow Ferrari", id: uuidv4() },
   ];
 
   const [displayedCards, setDisplayedCards] = useState(cards);
@@ -64,8 +74,10 @@ function App() {
     <>
       <header>
         <h1>Memory Card</h1>
-        <span className="score">Score:{score}</span>
-        <span className="highest:score">Highest Score:{highestScore}</span>
+        <div className="score-div">
+          <span className="score">Score: {score}</span>
+          <span className="highest:score">Highest Score: {highestScore}</span>
+        </div>
       </header>
       <hr />
 

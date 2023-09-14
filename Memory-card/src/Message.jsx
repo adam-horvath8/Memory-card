@@ -8,9 +8,11 @@ const Message = ({ playAgainFunction, message, setScore, setCardsPicked }) => {
   };
 
   return (
-    <div className="message">
-      {message}
-      <button onClick={handleClick}>Play again</button>
+    <div className="message-container">
+      <div className="message">
+        {message}
+        <button onClick={handleClick}>Play again</button>
+      </div>
     </div>
   );
 };
