@@ -1,6 +1,8 @@
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Tilt from "react-parallax-tilt";
+
 import Message from "./Message";
 import blackHotel from "./assets/black-hotel.jpg";
 import blackSign from "./assets/black-sign.jpg";
@@ -33,10 +35,6 @@ function App() {
   const [cardsPicked, setCardsPicked] = useState([]);
   const [losing, setLosing] = useState(false);
   const [winning, setWinning] = useState(false);
-
-  console.log(displayedCards);
-  console.log(cardsPicked);
-  console.log(losing);
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array];
@@ -83,18 +81,27 @@ function App() {
 
       <div className="main-div">
         {displayedCards.map((card) => (
-          <Card
-            setDisplayedCards={setDisplayedCards}
-            displayedCards={displayedCards}
-            shuffleArray={shuffleArray}
-            setCardsPicked={setCardsPicked}
-            setScore={setScore}
-            setLosing={setLosing}
-            key={card.id}
-            id={card.id}
-            picture={card.pic}
-            name={card.name}
-          />
+          <Tilt
+            glareEnable={true}
+            glareMaxOpacity={0.75}
+            glareColor="#ffffff"
+            glarePosition="all"
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
+          >
+            <Card
+              setDisplayedCards={setDisplayedCards}
+              displayedCards={displayedCards}
+              shuffleArray={shuffleArray}
+              setCardsPicked={setCardsPicked}
+              setScore={setScore}
+              setLosing={setLosing}
+              key={card.id}
+              id={card.id}
+              picture={card.pic}
+              name={card.name}
+            />
+          </Tilt>
         ))}
       </div>
       {losing && (
