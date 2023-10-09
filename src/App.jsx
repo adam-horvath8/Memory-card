@@ -83,7 +83,7 @@ function App() {
         {displayedCards.map((card) => (
           <Tilt
             glareEnable={true}
-            glareMaxOpacity={0.75}
+            glareMaxOpacity={0.35}
             glareColor="#ffffff"
             glarePosition="all"
             tiltMaxAngleX={15}
